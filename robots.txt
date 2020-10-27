@@ -1,1 +1,1 @@
-Sitemap: https://leejaeka.github.io/fasttest/sitemap.xml
+Sitemap: https://leejaeka.github.io/fastblog/sitemap.xml
