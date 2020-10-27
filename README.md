@@ -9,7 +9,7 @@ https://leejaeka.github.io/fasttest/
 # My Blog
 
 
-_powered by [fastpages](https://github.com/fastai/fastpages)_
+Welcome to my blog!
 
 
 ## What To Do Next?
