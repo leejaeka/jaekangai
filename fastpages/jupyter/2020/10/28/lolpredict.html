@@ -183,6 +183,14 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The dataset is a collection of League of Legends High Elo(Challenger, GM, Master, High Diamonds) Ranked games in Season 10, Korea(WWW), North America(NA), Eastern Europe(EUNE), and Western Europe(EUW) servers. These datas were collected from op.gg by web scrapping with python spyder. The latest game was played on Oct.16th on the dataset. In total there are 4028 unique games. Note that I've used one-hot encoding hence [99,54,101,73,57,96,52,102,68,52] this list represents number of all unique champions used in each lanes [BlueTop, BlueJG, BlueMid, BlueAdc, BlueSup, RedTop, RedJg, RedMid, RedAdc, RedSup] respectivley. Note that there are in total 151 unique champions with 'Samira' as the latest addition.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -294,7 +302,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># First look at our dataset. Game_length includes some annoying string values instead of time value</span>
 </pre></div>
 
     </div>
