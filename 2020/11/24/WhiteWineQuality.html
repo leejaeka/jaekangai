@@ -104,7 +104,7 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <p>========================================================</p>
 
-<p>The white wine quality dataset consists of 13 variables, with 4898 observations. Note that the quality was determined by at least three different wine experts. Let’s see what makes the best white wine!</p>
+<p>The white wine quality dataset consists of 13 variables, with 4898 observations. Note that the quality was determined by at least three different wine experts. Let us see what makes the best white wine!</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>##        X        fixed.acidity    volatile.acidity  citric.acid    
 ##  Min.   :   1   Min.   : 3.800   Min.   :0.0800   Min.   :0.0000  
@@ -160,7 +160,7 @@ window.onload = wrap_img;
 <ul>
   <li>Since the dataset consists of real experts (human in the end), I think majority of their points comes from sweetness(sugar), acidity, alcohol and density.</li>
   <li>Sugar had two main peaks at around 2 and 10. I guess majority of winemakers like to make their wine either sweet or not sweet. Most datas were skewed due to very few extreme outliers.</li>
-  <li>I’ve created total_acidity variable which doesn’t make any sense but simplifies fixed, volatile and citric acids and free_rate which is proportion of free sulfur dioxide in total sulfur dioxide. Both for small dimension reduction purpose.</li>
+  <li>I have created total_acidity variable which does not make any sense but simplifies fixed, volatile and citric acids and free_rate which is proportion of free sulfur dioxide in total sulfur dioxide. Both for small dimension reduction purpose.</li>
 </ul>
 
 <h1 id="one-shot-look-at-all-bivariates">One shot look at all bivariates</h1>
@@ -172,7 +172,19 @@ window.onload = wrap_img;
 
 <p><img src="https://leejaeka.github.io/fastblog/assets/img/2020-11-24-WhiteWineQuality/media/image9.png" alt="" /></p>
 
-<p>We can see that most scatterplots tends to form clusters with some outliers. Most interesting findings are… <em>1.</em> Quality is most correlated with alcohol, density, chlorides <em>2.</em> Alcohol is highly correlated with chloride(-0.82) and sugar(-0.46) <em>3.</em> Sugar, alcohol and density are highly correlated</p>
+<p>We can see that most scatterplots tends to form clusters with some outliers. Most interesting findings are…</p>
+
+<ol>
+  <li>
+    <p>Quality is most correlated with alcohol, density, chlorides</p>
+  </li>
+  <li>
+    <p>Alcohol is highly correlated with chloride(-0.82) and sugar(-0.46)</p>
+  </li>
+  <li>
+    <p>Sugar, alcohol and density are highly correlated</p>
+  </li>
+</ol>
 
 <p>Let’s have a closer look.</p>
 
