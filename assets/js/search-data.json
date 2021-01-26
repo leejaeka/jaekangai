@@ -145,10 +145,10 @@
   
     
         ,"post13": {
-            "title": "Title",
+            "title": "Jane Street Market Prediction 🎯",
             "content": "Conclusion . Other things to try/explore: . Weighted training. We know that sometimes we will encounter &#39;monster&#39; deals. It is crucial for the Kaggle competition to get these ones correct since these will probably outweight most other trades. So we could make model that focuses more on these heavy trades. (high weight X resp data) | Split data and train multiple models. Idea is that we could split the data into two by feature_0 and maybe one model that optimizes the &#39;1&#39;s data and another model that optimizes the &#39;-1&#39;s data. | Make much more features and explore more data (requires time and big data machines) | One interesting thing I learned is that apparently, in financial, it is sometimes good to heavily overfit the model. Something to do with volatile. I&#39;ve experimented with this and indeed my utility score for the competition went really high when super overfitted with epoches over 200. |",
-            "url": "https://leejaeka.github.io/jaekangai/2020/01/24/jane-predict-Copy1.html",
-            "relUrl": "/2020/01/24/jane-predict-Copy1.html",
+            "url": "https://leejaeka.github.io/jaekangai/mlp/2020/01/24/jane-predict-Copy1.html",
+            "relUrl": "/mlp/2020/01/24/jane-predict-Copy1.html",
             "date": " • Jan 24, 2020"
         }
         
