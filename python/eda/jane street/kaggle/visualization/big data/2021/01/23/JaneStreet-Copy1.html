@@ -96,7 +96,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -154,6 +154,7 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h4"><a href="#Dataset:-6GB-of-Real-world-financial-markets.">Dataset: 6GB of Real world financial markets. </a></li>
 <li class="toc-entry toc-h4"><a href="#Problem:-Predict-'Action'-columns">Problem: Predict &#39;Action&#39; columns </a></li>
+<li class="toc-entry toc-h4"><a href="#Proposing-a-solution">Proposing a solution </a></li>
 <li class="toc-entry toc-h4"><a href="#Metrics">Metrics </a></li>
 </ul>
 </li>
@@ -170,7 +171,7 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h3"><a href="#Reference-📖">Reference 📖 </a></li>
 <li class="toc-entry toc-h3"><a href="#Submission">Submission </a></li>
-<li class="toc-entry toc-h3"><a href="#Implementation-#1">Implementation #1 </a></li>
+<li class="toc-entry toc-h3"><a href="#Implementation-Planning">Implementation Planning </a></li>
 </ul>
 </li>
 </ul><!--
@@ -241,6 +242,13 @@ window.onload = wrap_img;
 <a class="anchor" href="#Problem:-Predict-'Action'-columns" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem: Predict 'Action' columns<a class="anchor-link" href="#Problem:-Predict-'Action'-columns"> </a>
 </h4>
 <p>Where 1 to make the trade and 0 to pass on it. The goal is minimize choosing bad trades and maximizing good trades. <br></p>
+<h4 id="Proposing-a-solution">
+<a class="anchor" href="#Proposing-a-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Proposing a solution<a class="anchor-link" href="#Proposing-a-solution"> </a>
+</h4>
+<p>Even the world's finest financial expert wouldn't be able to gain anything from this anonymized data. Hence we are forced to use machine learning or data science approach to solve this problem. <br>
+Since the goal is clear (maximize profit) we want to see which features seem important or strange through EDA and visualizations. We will also have to grasp understanding of the data so it is not just a big 6GB of numbers. This will help us decide what to do with missing values and do feature engineering to help the computer learn. <br>
+Then we are going to build classifier model to let the computer do the hard work of learning to make good predictions. Of course, these models will be terrible at first so we will have to supervise it closely with some hyperparameters and strict evaluations. <br>
+Finally, the Jane Street will evaluate our submission and tell us if it is any good : )</p>
 <h4 id="Metrics">
 <a class="anchor" href="#Metrics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Metrics<a class="anchor-link" href="#Metrics"> </a>
 </h4>
@@ -1481,8 +1489,8 @@ Name: feature_0, dtype: int64</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In another <a href="https://leejaeka.github.io/jaekangai/mlp/python/feature%20engineering/imputation/jane%20street/kaggle/visualization/big%20data/random%20forest/2021/01/25/jane-predict.html">notebook</a>.</p>
-<h3 id="Implementation-#1">
-<a class="anchor" href="#Implementation-#1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation #1<a class="anchor-link" href="#Implementation-#1"> </a>
+<h3 id="Implementation-Planning">
+<a class="anchor" href="#Implementation-Planning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation Planning<a class="anchor-link" href="#Implementation-Planning"> </a>
 </h3>
 <p>Thoughts going into predicting phase.</p>
 <ol>

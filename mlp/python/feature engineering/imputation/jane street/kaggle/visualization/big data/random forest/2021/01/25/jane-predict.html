@@ -96,7 +96,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      11 min read
     
 </span></p>
 
@@ -166,13 +166,23 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Import-Data-📚">Import Data 📚 </a></li>
 <li class="toc-entry toc-h3"><a href="#Feature-Engineering-🔧">Feature Engineering 🔧 </a></li>
 <li class="toc-entry toc-h3"><a href="#Split-data-✂️">Split data ✂️ </a></li>
-<li class="toc-entry toc-h3"><a href="#Implementation-#2">Implementation #2 </a></li>
+<li class="toc-entry toc-h3"><a href="#Implementation-#2">Implementation #2 </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Algoritms-&-Technique">Algoritms &amp; Technique </a></li>
+<li class="toc-entry toc-h4"><a href="#Metrics">Metrics </a></li>
+<li class="toc-entry toc-h4"><a href="#Complications">Complications </a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Results">Results </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Random-Forest-Classifier-evaluation-and-validation">Random Forest Classifier evaluation and validation </a></li>
-<li class="toc-entry toc-h3"><a href="#Result-1-justification">Result 1 justification </a></li>
+<li class="toc-entry toc-h3"><a href="#Result-1-justification">Result 1 justification </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Result-1-implementation">Result 1 implementation </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h3"><a href="#MLP-evaluation-and-validation">MLP evaluation and validation </a></li>
 <li class="toc-entry toc-h3"><a href="#Result-2-justification">Result 2 justification </a></li>
 <li class="toc-entry toc-h3"><a href="#Hyper-parameter-tuning-/-Refinement">Hyper-parameter tuning / Refinement </a></li>
@@ -941,7 +951,19 @@ window.onload = wrap_img;
 <h3 id="Implementation-#2">
 <a class="anchor" href="#Implementation-#2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation #2<a class="anchor-link" href="#Implementation-#2"> </a>
 </h3>
-<p>Now we have our data ready for training. There are hundreds of classifier model we can choose from and explore. However, after studying the Kaggle notebooks other participants have submitted, all high scored model seem to use Neural Network. I am going to try using random forest classifier and MLP to experiment here. Random Forest are always good for early because it is easy to just build and evaluate. Neural network is good at learning complicated models with the right parameter tuning.</p>
+<h4 id="Algoritms-&amp;-Technique">
+<a class="anchor" href="#Algoritms-&amp;-Technique" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algoritms &amp; Technique<a class="anchor-link" href="#Algoritms-&amp;-Technique"> </a>
+</h4>
+<p>For technique, we already applied a lot of our knowledge from our EDA into our dataset. (Feature engineering, imputing nulls, dropping &lt; 85 days, etc). For algorithm, we are going to use machine learning. <br>
+Now we have our data ready for training. There are hundreds of classifier model we can choose from and explore. However, after studying the Kaggle notebooks other participants have submitted, all high scored model seem to use Neural Network. I am going to try using random forest classifier and MLP to experiment here. Random Forest are always good for early because it is easy to just build and evaluate. Neural network is good at learning complicated models with the right parameter tuning. <br></p>
+<h4 id="Metrics">
+<a class="anchor" href="#Metrics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Metrics<a class="anchor-link" href="#Metrics"> </a>
+</h4>
+<p>Since this is a multiclass-classifying problem (5 types of 'resp' -&gt; gave us 5 pos vs neg target variables), for performance metrics we are going to use AUC(area under curve) as well as pure accuracy score for overall performance. With this metrics, we can see how our model is performing on unseen data and prevent overfitting easily to see any area for improvement accordingly. Sklearn and Seaborn provides great graphing tools for these metrics as well.</p>
+<h4 id="Complications">
+<a class="anchor" href="#Complications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Complications<a class="anchor-link" href="#Complications"> </a>
+</h4>
+<p>Note that the worst complication I had to face going through rest of this notebook was the size of the data. Depending on your computer's RAM size and GPU computation speed this experience will vary. In my case, I ran into out of memory a hundreds of times. To avoid this, try using cloud training. If not make sure to save your computed data frequently and clean RAM with gc.collect and del function to free up space as much as possible.</p>
 
 </div>
 </div>
@@ -1094,6 +1116,17 @@ resp_4
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So we got about 52.4% accuracy with random forest. <br>
 From the confusion matrix, we can tell that the model is having harder time predicting 0's correctly. It is actually doing a good job of classifying 1's though! So with this model, we can expect to get lots of good trades but also fail to not go for bad trades.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Result-1-implementation">
+<a class="anchor" href="#Result-1-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Result 1 implementation<a class="anchor-link" href="#Result-1-implementation"> </a>
+</h4>
+<p>This was our first pass solution. Although we were able to get a positive score of 52.4%, when submitted to Jane Street for Evaluation, it returned a score of 0. Meaning we have lost more profit than we gained. (The competition didn't return negative scores and only calculated positive gains). This suggests that although we were able to get more 'correct' trades, the scale of the trades we failed to predict correctly have out-weighted our correct predictions.</p>
 
 </div>
 </div>
