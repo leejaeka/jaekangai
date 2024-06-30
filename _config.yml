@@ -100,7 +100,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme: jekyll/minima@<insert-commit-hash_or_tag>
+remote_theme: jekyll/minima
 
 titles_from_headings:
   enabled:     true
@@ -115,3 +115,7 @@ kramdown:
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
+
+social_links:
+    - { platform: github, user_url: "https://github.com/leejaeka/" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/jaekang-lee/" }
